@@ -1,5 +1,5 @@
 import numpy as np
-from ZeroCore import diatomic
+from zerocore import diatomic
 from scipy.interpolate import splrep, splev
 
 import matplotlib.pyplot as plt

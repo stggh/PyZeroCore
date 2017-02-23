@@ -5,7 +5,7 @@ import matplotlib.gridspec as gridspec
 
 import scipy.constants as C
 from scipy.interpolate import interp1d
-from ZeroCore import atomic
+from zerocore import atomic
 
 def pwr(x):
     return int(np.floor(np.log10(x))) if x > 0 else 1
@@ -104,7 +104,7 @@ lZC3P, = ax0.plot(E[subr], Pxs[subr], 'C2-', label=r"$^{3}P$ zero core")
 subr = E > 3.26
 lZC1D, = ax0.plot(E[subr], Pxs[subr]+Dxs[subr], 'C3-', label=r"$^{1}D$ zero core")
 lW, = ax0.plot(exW, xsW*0.71, 'C6--', label=r"Wu $\times 0.71$")
-lZ, = ax0.plot(exZ, xsZ*0.65, 'C4--', label=r"Zatsarinny $\times 0.65$")
+lZ, = ax0.plot(exZ, xsZ*0.75, 'C4--', label=r"Zatsarinny $\times 0.75$")
 
 # lh
 ax0.legend(handles=[lb, lh, ll, lW, lZ, lZC3P, lZC1D], labelspacing=0.1,

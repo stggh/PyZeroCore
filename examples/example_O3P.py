@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 import scipy.constants as C
 from scipy.interpolate import interp1d
-from ZeroCore import atomic
+
+from zerocore import atomic
 
 def pwr(x):
     return int(np.floor(np.log10(x))) if x > 0 else 1
@@ -72,6 +73,5 @@ plt.legend(numpoints=1, labelspacing=0.1, loc=0, frameon=False,
            prop=FontProperties(size='small'))
 plt.suptitle("O$^{-}$ photodetachment", fontsize=15)
 
-#savetxt ("O-StehmanWooXS.dat",column_stack((E,Pxs+Dxs)))
-plt.savefig("output/example_O3P.png", dpi=100)
+plt.savefig("output/example_O3P.png")
 plt.show()

@@ -33,4 +33,4 @@ The Zero-core-contribution method
 
 Implementation
 --------------
-This is simply a Python implementation of the algorithms given in the above publications. The atomic version is 
+This is a Python implementation of the algorithms given in the above publications. The atomic version are Eq.

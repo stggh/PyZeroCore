@@ -8,12 +8,12 @@ from scipy.special import sph_harm, spherical_jn
 import scipy.constants as C
 
 class ZeroCore:
-      """
-      polyatomic photodetachment
-      based on Stehman and Woo Phys. Rev. A. 20, 281-290 (1979) and
-                               Phys. Rev. A. 28, 760-765 (1983)
+    """
+    polyatomic photodetachment
+    based on Stehman and Woo Phys. Rev. A. 20, 281-290 (1979) and
+                             Phys. Rev. A. 28, 760-765 (1983)
       
-      """
+    """
 
     def __init__(self, eKE, EA, En, G, R, Rn, Ro, alpha, vib=0):
 
@@ -85,6 +85,7 @@ class ZeroCore:
         def f(r, theta, phi): 
             return self.phi(self.gam, *r*sph_harm(1, m, theta, phi)\
                    *phi_i(gam, R, r, x)
+
         overlap, err = tplquad(f, self.Rinit(), lambda x: self.Roo*C.angstrom,
                                lambda r: 0, lambda r: pi,
                                lambda r: 0, lambda r: 2*pi)

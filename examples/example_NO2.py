@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.constants as C
-from ZeroCore import polyatomic
+from zerocore import polyatomic
 
 #---- main ----
 Em=0.0; Ex=8.0; dE=0.05
