@@ -79,7 +79,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'PyZeroCore'
-copyright = '2016, PyZeroCore team'
+copyright = '2017, PyZeroCore team'
 author = 'PyZeroCore team'
 
 # The version info for the project you're documenting, acts as replacement for

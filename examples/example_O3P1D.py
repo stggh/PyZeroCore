@@ -39,11 +39,11 @@ def weighted_ave(x, ex):
     return wave, 1/np.sqrt(ssig)
 
 #---- main ----
-# Threshold energies
+# Threshold energies 
 EA = 11784.676   # O(3P) the O-atom electron affinity cm-1
 EAD = EA + 15867.862   # O(1D2) threshold energy cm-1
 
-# experimental data
+# Experimental data --------------------------
 ex, xsb = np.loadtxt("data/Branscombxs.dat", unpack=True)
 exH, xsH, exsH = np.loadtxt("data/Hlavenka_3P.dat", unpack=True)
 exL, xsL, exsL = np.loadtxt("data/Lee_3P.dat", unpack=True)
@@ -70,13 +70,14 @@ EbD /= 8065.541
 EbP /= 8065.541
 ECZ, CZ = np.loadtxt("data/O-CooperZare.dat", unpack=True)
 
-En = np.arange (0.01,5,0.1)
+# Zero-core-contribution calculation ----------------------
+En = np.arange(0.01, 5, 0.1)
 
-# Zero-core-contribution calculation
 # 0.8e-10 for both looks good for xs, totally misses beta
 r0P = 1.5e-10 #0.96e-10
 r0D = 1.8e-10
 
+# zero-core atomic class for oxygen
 O3P = atomic.O(En, EA, r0P, -0.95)
 O1D = atomic.O(En, EAD, r0D, -0.95)
 
@@ -99,7 +100,7 @@ E = np.arange(EA/8065.541, Emax, 0.1)
 Pxs = P(E)*scalefactorp
 Dxs = D(E)*scalefactorp
 
-#------- plots ---------------
+# Plots -----------------------------------
 gs = gridspec.GridSpec(1, 2, left=0.1, bottom=0.12, right=0.95, top=0.85,
                              wspace=0.35, hspace=0.2)
 ax0 = plt.subplot(gs[0, 0])

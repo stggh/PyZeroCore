@@ -13,11 +13,11 @@ Unit tests
 
 Before submitting at Pull Request, be sure to run the unit tests. The test suite can be run from within the PyAbel package with ::
 
-    nosetests  ZeroCore/tests/  --verbosity=2  --with-coverage --cover-package=cse
+    nosetests  ZeroCore/tests/  --verbosity=2  --with-coverage --cover-package=zerocore
 
 or, from any folder with ::
 
-    python  -c "import ZeroCore.tests; cse.tests.run_cli(coverage=True)"
+    python  -c "import zerocore.tests; zerocore.tests.run_cli(coverage=True)"
 
 which performs an equivalent call.
 
