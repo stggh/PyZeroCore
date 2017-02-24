@@ -285,7 +285,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pyabel', 'PyZeroCore Documentation',
+    (master_doc, 'pyzerocore', 'PyZeroCore Documentation',
      [author], 1)
 ]
 
@@ -300,8 +300,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   (master_doc, 'PyZeroCore', 'PyZeroCore Documentation',
-   author, 'PyZeroCore', 'Numerical solution to the time-independent coupled-channel Sch\"odinger equation using the Johnson renormalized Numerov method.',
-   'diatomic spectra'),
+   author, 'PyZeroCore', 'Python implementation of Stehman and Woo\'s zero-core contribution model', 'photodetachment spectra'),
 ]
 
 # Documents to append as an appendix to all manuals.
