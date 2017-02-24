@@ -38,3 +38,6 @@ Reference
 Citation
 --------
 If you find PyZeroCore useful in your work please consider citing this project.
+
+.. image:: https://zenodo.org/badge/82896133.svg
+   :target: https://zenodo.org/badge/latestdoi/82896133
