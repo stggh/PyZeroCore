@@ -17,10 +17,19 @@ zerocore.diatomic module
     :special-members:
     :show-inheritance:
 
-zerocore.polyatomic module
---------------------------
+#zerocore.polyatomic module
+#--------------------------
+#
+#.. automodule:: zerocore.polyatomic
+#    :members:
+#    :special-members:
+#    :show-inheritance:
 
-.. automodule:: zerocore.polyatomic
+
+O-Scharf module
+---------------
+
+.. automodule:: zerocore.O-Scharf
     :members:
     :special-members:
     :show-inheritance:

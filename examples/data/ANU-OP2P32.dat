@@ -1,3 +1,7 @@
+# ANU O(3P) anisotropy parameter measurements
+# See Cavanagh, Gibson, and Lewis J. Phys. Conf. Ser. 212, 012034 (2010)
+#
+#  eKE (eV)   beta_3P   error
 0.016484945 -0.082 0.005
 0.019936666 -0.072 0.006
 0.020120163 -0.08 0.004

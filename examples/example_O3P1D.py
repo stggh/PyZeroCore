@@ -1,4 +1,16 @@
 # -*- coding: utf-8 -*-
+
+###########################################################################
+#
+# PyZeroCore - atomic oxygen example
+#
+# See:
+#     Duong, Laws, Cavanagh, Mills, Lewis, and Gibson J. Chem. Phys. (2017)
+#     Special Topic: Developments and Applications of Velocity Mapped Imaging
+#                    Techniques
+#
+###########################################################################
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -7,13 +19,15 @@ import scipy.constants as C
 from scipy.interpolate import interp1d
 from zerocore import atomic
 
-def pwr(x):
-    return int(np.floor(np.log10(x))) if x > 0 else 1
-
-def fmt(num, err):
+# auxillary functions for nice printing
+def _fmt(num, err):
     ''' format xxx+-yyy  number as xxx(yyy) '''
-    ints = pwr(num)
-    decpl = pwr(err)
+
+    def _pwr(x):
+        return int(np.floor(np.log10(x))) if x > 0 else 1
+
+    ints = _pwr(num)
+    decpl = _pwr(err)
     adecpl = abs(decpl)
     f = '{{}}'+"{{}}.{{}}".format(ints+adecpl, adecpl) + "f({{}})"
     return f.format(num, round(err/(10**decpl)))
@@ -25,7 +39,8 @@ def weighted_ave(x, ex):
     return wave, 1/np.sqrt(ssig)
 
 #---- main ----
-EA = 11784.676   # O-atom electron affinity cm-1
+# Threshold energies
+EA = 11784.676   # O(3P) the O-atom electron affinity cm-1
 EAD = EA + 15867.862   # O(1D2) threshold energy cm-1
 
 # experimental data
@@ -36,7 +51,7 @@ exW, xsW = np.loadtxt("data/Wuxs.dat", unpack=True)
 exZ, xsZ = np.loadtxt("data/Zatxs.dat", unpack=True)
 exZ += 1.4611
 
-# anisotropy
+# anisotropy parameter data
 EbA, betaA, ebA = np.loadtxt("data/ANU-OP2P32.dat", unpack=True)
 EbD, betaD, ebD = np.loadtxt("data/beta_1D.dat", unpack=True)
 EbP, betaP, ebP = np.loadtxt("data/beta_3P.dat", unpack=True)
@@ -57,6 +72,7 @@ ECZ, CZ = np.loadtxt("data/O-CooperZare.dat", unpack=True)
 
 En = np.arange (0.01,5,0.1)
 
+# Zero-core-contribution calculation
 # 0.8e-10 for both looks good for xs, totally misses beta
 r0P = 1.5e-10 #0.96e-10
 r0D = 1.8e-10
