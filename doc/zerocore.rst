@@ -26,10 +26,10 @@ zerocore.diatomic module
 #    :show-inheritance:
 
 
-O-Scharf module
----------------
-
-.. automodule:: zerocore.O-Scharf
-    :members:
-    :special-members:
-    :show-inheritance:
+#O-Scharf module
+#---------------
+#
+#.. automodule:: zerocore.O-Scharf
+#    :members:
+#    :special-members:
+#    :show-inheritance:
