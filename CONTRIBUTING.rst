@@ -2,10 +2,13 @@ Contributing to PyZeroCore
 ==========================
 
 
-PyZeroCore is an open source project and improvements are welcome! Please let us know about any issues with the software, even if is just a typo. The easiest way to get started is to open a `new issue <https://github.com/stggh/PyZeroCore/issues>`_.
+PyZeroCore is an open source project and improvements are welcome! 
+
+The `atomic.py` and `diatomic.py` codes are functional. See the `examples` directory. They "should" work for other atomic and diatomic species. `polyatomic.py` is work in progress, with bugs.
+
+Please let us know about any issues with the software, even if is just a typo. The easiest way to get started is to open a `new issue <https://github.com/stggh/PyZeroCore/issues>`_.
 
 If you would like to make a Pull Request, the following information may be useful.
-
 
 
 Unit tests
