@@ -67,6 +67,12 @@ class ZeroCore:
        EA *= C.e/8065.541 if EA > 10 else 1
        gam = self._K(EA)
        N = self._N2(gam, r0)
+
+       # does not like en = 0. Set 0, and any negative energies to 
+       # small value, close enough to threshold
+       neg_ens = en <= 0
+       en[neg_ens] = 0.01
+
        k  = self._K(en*C.e)
        omega = en*C.e + EA
        R_sp = self._Rsp(k, gam, r0, N)
