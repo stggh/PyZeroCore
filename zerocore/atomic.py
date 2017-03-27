@@ -68,15 +68,16 @@ class ZeroCore:
        gam = self._K(EA)
        N = self._N2(gam, r0)
 
-       # does not like en = 0. Set 0, and any negative energies to 
-       # small value, close enough to threshold
-       neg_ens = en <= 0
-       en[neg_ens] = 0.01
+       # ZCC atomic does not like en=0, make finite
+       subE = en <=0
+       en[subE] = 1.0e-20
 
        k  = self._K(en*C.e)
        omega = en*C.e + EA
+
        R_sp = self._Rsp(k, gam, r0, N)
        R_dp = self._Rdp(k, gam, r0, N)
+
        xs = 2*R_dp**2 + R_sp**2
        beta = 2*(R_dp**2 - 2*cosdelta*R_dp*R_sp)/xs
        xs *= (8*C.pi*C.e**2*C.m_e*k*omega/9/C.hbar**2/C.c)
