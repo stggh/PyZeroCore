@@ -1,5 +1,5 @@
-PyZeroCore README
-=================
+PyZeroCoreContribution README
+=============================
 
 .. image:: https://travis-ci.org/stggh/PyZeroCore.svg?branch=master
     :target: https://travis-ci.org/stggh/PyZeroCore
@@ -7,7 +7,7 @@ PyZeroCore README
 
 Introduction
 ------------
-``PyZeroCore`` is a python implementation of the Zero-Core-contribution method for the calculation photodetachment cross sections and anisotropy parameters of negative-ions.  Details are in the following publications [1, 2, 3, 4] and others.
+``PyZeroCoreContribution`` is a python implementation of the Zero-Core-contribution method for the calculation photodetachment cross sections and anisotropy parameters of negative-ions.  Details are in the following publications [1, 2, 3, 4] and others.
 
 
 Method
