@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = "PyZeroCore",
+    name = "PyZeroCoreContribution",
     version = "0.1",
-    description='A Python package to evaluate photodetachment cross sections and anisotropy parameters using the zero-core algorithms of Stehman and Woo',
+    description='A Python package to evaluate photodetachment cross sections and anisotropy parameters using the zero-core contribution algorithms of Stehman and Woo',
     packages=find_packages(),
     classifiers=[
       'Development Status :: 3 - Alpha',
@@ -13,7 +13,7 @@ setup(
       'Topic :: Scientific/Engineering :: Physics',
       'Topic :: Scientific/Engineering :: Chemistry',
       'Topic :: Software Development :: Libraries :: Python Modules',
-      'Programming Language :: Python :: 3.5',
+      'Programming Language :: Python :: 3.6',
       ],
 )
 
